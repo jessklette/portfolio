@@ -1,0 +1,242 @@
+
+
+/* 
+============================
+CSS RESET
+============================
+*/
+:root {
+--ff-primary: 'Satoshi', sans-serif;
+--ff-secondary: 'General Sans', sans-serif;
+
+--ff-body: var(--ff-secondary);
+--ff-heading: var(--ff-primary);
+
+--fw-regular: 300;
+--fw-semi-bold: 500;
+--fw-bold: 700;
+
+--font-s: 1em;
+--font-m: 1.5em;
+--font-l: 2em;
+--font-xl: 3em;
+--font-xxl: 4.2em;
+
+--ff-light-mode: rgb(255, 255, 255);
+
+--bg-dark-mode: rgb(4, 4, 4);
+--bg-light-mode: rgba(193, 36, 211, 0.537);
+
+--primary-color-light: whitesmoke;
+--primary-color-dark: rgb(4, 4, 4);
+--secondary-color: #ff0095;
+
+--spacing-s: 0.5em;
+--spacing-m: 1em;
+--spacing-l: 1.8em;
+--spacing-xl: 2em;
+--spacing-xxl: 4.2em;
+--width-container: 1000px;
+--min-width-container: 300px;
+}
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+* {
+margin: 0;
+padding: 0;
+font-family: var(--ff-primary);
+}
+
+ul[role='list'],
+ol[role='list'] {
+list-style: none;
+}
+
+body {
+  background-color: var(--primary-color-dark);
+  color: var(--ff-light-mode);
+}
+
+
+
+
+/* 
+============================
+SOCIAL ICONS
+============================
+*/
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+
+.social-container {
+    text-align: right;
+    padding-right: 5em;
+}
+
+.social-icons {
+    padding: 0;
+    list-style: none;
+    margin: 1em;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin: 0.15em;
+    position: relative;
+    font-size: 1.2em;
+}
+
+.social-icons i {
+    position: absolute;
+    top: 21px;
+    left: 21px;
+    transition: all 265ms ease-out;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons a:before {
+    content: " ";
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: block;
+    transition: all 165ms ease-out;
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+}
+
+.social-icons a:hover:before {
+    transform: scale(0);
+    transition: all 265ms ease-in;
+}
+
+.social-icons a:hover i {
+    transform: scale(2.0);
+    transition: all 165ms ease-in;
+}
+
+/* 
+============================
+LAYOUT
+============================
+*/
+.container {
+  /* background-color: #000123; */
+  /* display: flex; */
+  /* flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; */
+  width: 80%;
+  max-width: var(--width-container);
+  margin: 0 auto;
+  margin-bottom: 5em;
+}
+
+.container_column {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: var(--width-container);
+  margin: 0 auto;
+} 
+
+header {
+  width: 100%;
+  height: 120px;
+  background-color: transparent;
+  padding-top: var(--spacing-l);
+  padding-bottom: var(--spacing-l);
+}
+
+/* 
+============================
+HERO TEXT HOVER SECTION
+============================
+*/
+span {
+  cursor: crosshair;
+}
+
+#click_cursor {
+  cursor: pointer;
+}
+
+#hero > h1 {
+  font-size: 1.5em;
+  font-weight: var(--fw-semi-bold);
+}
+
+@media only screen and (min-width: 767px){
+  .feature-landing h1 {
+    display: block;
+    font-weight: 700;
+    padding-bottom: 0.1em;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  #hero {
+    font-size: var(--font-xl);
+  }
+}
+
+/* 
+============================
+HERO TEXT HOVER SECTION
+============================
+*/
+
+hero {
+  margin: auto o;
+  font-size: 2em;
+  z-index: 1;
+}
+
+hero > a {
+  color: rgba(255, 255, 255, 0.176);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+hero > a:hover {
+  color: white;
+}
+
+hero > a > span {
+  display: inline;
+  position: relative;
+  z-index: 2;
+}
+
+hero > a:hover > span {  
+  text-shadow: 1px 1px 1px black;
+  /* text-transform: uppercase; */
+}
+
+hero > a > img {
+  position: absolute;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: transform 250ms, opacity 250ms;
+  pointer-events: none;
+  width: min(40vw, 500px);
+}
+
+hero > a:hover > img {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
