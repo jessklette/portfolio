@@ -1,7 +1,3 @@
-# JESKLE866_FTO2301_GroupA_JessKlette_PF1
-
-# Codespace Academy
-
 Hi, I'm Jess. Social worker to Software Developer 💻 Project Manager | Javascript Developer | Web Developer | 🥗 Currently thinking about and building innovative solutions to the mental health and metabolic health crisis. 🏋🏼‍♀️
 
 This is my digital portfolio webpage. This project was created as part of the Final Portfolio Project for the Intro to Web course at Codespace Academy. This portfolio serves to display my professional information, education history, work history as well as my personal projects.
